@@ -1,6 +1,7 @@
 
 
 
+
 #include <stdio.h>
 #include <math.h>
 void printFibonacci(int);
@@ -54,3 +55,14 @@ void printFibonacci(int n) {
         }
     }
     printf("\n");
+    }
+    
+int isPrime(int num) {
+    if (num <= 1) return 0; 
+    for (int i = 2; i <= sqrt(num); i++) {
+        if (num % i == 0) {
+            return 0; 
+        }
+    }
+    return 1;
+}
